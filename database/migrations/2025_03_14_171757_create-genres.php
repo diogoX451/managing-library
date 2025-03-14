@@ -28,6 +28,8 @@ return new class extends Migration
         foreach ($genres as $genre) {
             DB::table('genres')->insert([
                 'name' => $genre,
+                'created_at' => now(),
+                'updated_at' => now(),
             ]);
         }
     }
